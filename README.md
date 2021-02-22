@@ -1,2 +1,2 @@
 # Ice-Cream-Apps
-Mobile Course: IOS and Andriod apps
+Mobile Course: Two Andriod apps each done in Java and Kotlin respectivly. Both apps were made in Anderiod Studio.
