@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Dev_name">Wael Alghamdi</string>
+    <string name="App_name">Ice cream Sundea Maker</string>
+    <string name="Company_name">Frank\'s Ice Cream Co.</string>
+    <string name="Lang_used">Java</string>
+    <string name="Instructor_name">Frank Metropolis</string>
+    <string name="App_ver">V1.0</string>
+
+</resources>
