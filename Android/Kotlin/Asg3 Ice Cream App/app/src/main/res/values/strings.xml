@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Asg3 Ice Cream App</string>
+    <string name="action_order_history">Order History</string>
+    <string name="action_about">About</string>
+
+    <string name="spinner_prompt_ice_cream_type">Select IceCream Type</string>
+    <string-array name="ice_cream_types">
+        <item>Vanilla</item>
+        <item>Chocolate</item>
+        <item>Strawberries</item>
+    </string-array>
+
+    <string name="spinner_prompt_ice_cream_size">Select IceCream Size</string>
+    <string-array name="ice_cream_sizes">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+    </string-array>
+</resources>

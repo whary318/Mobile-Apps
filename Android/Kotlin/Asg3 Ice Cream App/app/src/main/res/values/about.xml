@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Dev_name">Wael Alghamdi</string>
+    <string name="App_name">Ice Cream Sundea Maker</string>
+    <string name="Company_name">Frank\'s Ice Cream Co.</string>
+    <string name="Lang_used">Kotlin</string>
+    <string name="Instructor_name">Frank Metropolis</string>
+    <string name="App_ver">V2.0</string>
+</resources>

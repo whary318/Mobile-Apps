@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+    <TextView
+        android:id="@+id/appNameTextView"
+        android:layout_width="201dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/App_name"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/totalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="$xx.xx"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appNameTextView" />
+
+    <LinearLayout
+        android:id="@+id/ice_cream_v_linearLayout"
+        android:layout_width="285dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalTextView">
+
+        <LinearLayout
+            android:layout_width="81dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ice_cream_type_textView"
+                android:layout_width="79dp"
+                android:layout_height="wrap_content"
+                android:text="Ice Cream:"
+                android:textAlignment="textEnd"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/size_textView"
+                android:layout_width="79dp"
+                android:layout_height="24dp"
+                android:paddingTop="5dip"
+                android:text="Size:"
+                android:textAlignment="textEnd" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="201dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/iceCreamSpinner"
+                android:layout_width="200dp"
+                android:layout_height="25dp"
+                android:entries="@array/ice_cream_types"
+                android:prompt="@string/spinner_prompt_ice_cream_type"
+                android:spinnerMode="dialog" />
+
+            <Spinner
+                android:id="@+id/iceCreamSizeSpinner"
+                android:layout_width="200dp"
+                android:layout_height="25dp"
+                android:entries="@array/ice_cream_sizes"
+                android:prompt="@string/spinner_prompt_ice_cream_size"
+                android:spinnerMode="dialog" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/toppings_linearLayout"
+        android:layout_width="281dp"
+        android:layout_height="139dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ice_cream_v_linearLayout">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip">
+
+            <CheckBox
+                android:id="@+id/mAndMsCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="handleChecked"
+                android:paddingTop="8dip"
+                android:paddingBottom="8dip"
+                android:text="MnMs"
+                tools:layout_editor_absoluteX="225dp"
+                tools:layout_editor_absoluteY="274dp" />
+
+            <CheckBox
+                android:id="@+id/marshmallowsCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="handleChecked"
+                android:paddingTop="8dip"
+                android:paddingBottom="8dip"
+                android:text="Marshmallows"
+                tools:layout_editor_absoluteX="223dp"
+                tools:layout_editor_absoluteY="418dp" />
+
+            <CheckBox
+                android:id="@+id/browniesCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="handleChecked"
+                android:paddingTop="8dip"
+                android:paddingBottom="8dip"
+                android:text="Brownies"
+                tools:layout_editor_absoluteX="222dp"
+                tools:layout_editor_absoluteY="322dp" />
+
+            <CheckBox
+                android:id="@+id/oreosCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="handleChecked"
+                android:paddingTop="8dip"
+                android:paddingBottom="8dip"
+                android:text="Oreos"
+                tools:layout_editor_absoluteX="222dp"
+                tools:layout_editor_absoluteY="370dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip">
+
+            <CheckBox
+                android:id="@+id/strawberriesCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="handleChecked"
+                android:paddingTop="8dip"
+                android:paddingBottom="8dip"
+                android:text="Strawberries"
+                tools:layout_editor_absoluteX="42dp"
+                tools:layout_editor_absoluteY="370dp" />
+
+            <CheckBox
+                android:id="@+id/almondsCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="handleChecked"
+                android:paddingTop="8dip"
+                android:paddingBottom="8dip"
+                android:text="Almonds"
+                tools:layout_editor_absoluteX="43dp"
+                tools:layout_editor_absoluteY="322dp" />
+
+            <CheckBox
+                android:id="@+id/gummyBearsCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="handleChecked"
+                android:paddingTop="8dip"
+                android:paddingBottom="8dip"
+                android:text="Gummy Bears"
+                tools:layout_editor_absoluteX="41dp"
+                tools:layout_editor_absoluteY="418dp" />
+
+            <CheckBox
+                android:id="@+id/peanutsCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="handleChecked"
+                android:paddingTop="8dip"
+                android:paddingBottom="8dip"
+                android:text="Peanuts"
+                tools:layout_editor_absoluteX="43dp"
+                tools:layout_editor_absoluteY="274dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hot_fudge_linearLayout"
+        android:layout_width="255dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toppings_linearLayout">
+
+        <TextView
+            android:id="@+id/hot_fudge_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hot Fudge:" />
+
+        <SeekBar
+            android:id="@+id/hotFudgeSeekBar"
+            android:layout_width="158dp"
+            android:layout_height="18dp"
+            android:max="3"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip"
+            android:progress="1" />
+
+        <TextView
+            android:id="@+id/hotFudgeAmountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x oz" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/theWorksButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="handleTheWorks"
+        android:text="THE WORKS!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:onClick="handleReset"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/orderButton"
+        app:layout_constraintStart_toEndOf="@+id/theWorksButton" />
+
+    <Button
+        android:id="@+id/orderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="handleOrder"
+        android:text="Order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
